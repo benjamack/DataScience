@@ -39,8 +39,8 @@ f1_cache/
 Thumbs.db
 
 # Archivos generados por el análisis
-analysis_*.png
-correlation_matrix_*.png
+plots/
+*.png
 
 # Archivos del sistema
 *.pyc 

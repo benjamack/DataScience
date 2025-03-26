@@ -5,6 +5,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy import stats
 from sklearn.preprocessing import StandardScaler
+import os
+
+# Crear directorio para plots si no existe
+os.makedirs('plots', exist_ok=True)
 
 # Configuración de visualización
 plt.style.use('seaborn')
@@ -77,7 +81,7 @@ def analyze_variable(race_df, var_name, title, race_name):
     plt.title(f'Histograma de {title} - {race_name}')
     
     plt.tight_layout()
-    plt.savefig(f'analysis_{var_name}_{race_name.replace(" ", "_")}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join('plots', f'analysis_{var_name}_{race_name.replace(" ", "_")}.png'), dpi=300, bbox_inches='tight')
     plt.close()
     
     # Calcular correlación y estadísticas
@@ -125,7 +129,7 @@ for race_name in df['Race'].unique():
                 linewidths=.5)
     plt.title(f'Matriz de Correlación entre Variables - {race_name}')
     plt.tight_layout()
-    plt.savefig(f'correlation_matrix_{race_name.replace(" ", "_")}.png', dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join('plots', f'correlation_matrix_{race_name.replace(" ", "_")}.png'), dpi=300, bbox_inches='tight')
     plt.close()
 
 # Imprimir resumen de hallazgos por carrera
