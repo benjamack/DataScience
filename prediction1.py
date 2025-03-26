@@ -45,6 +45,17 @@ if X.shape[0] == 0:
     raise ValueError("Dataset is empty after preprocessing. Check data sources!")
 
 # Train Gradient Boosting Model
+###Cada árbol podría estar especializado en diferentes aspectos:
+###Algunos árboles podrían enfocarse en pilotos rápidos
+###Otros en pilotos que mejoran en carrera
+###Otros en patrones específicos de rendimiento
+###La combinación de múltiples árboles (como lo hace el Gradient Boosting) hace que las predicciones sean más robustas y precisas que un solo árbol de decisión.
+###¿Por qué es especialmente útil para F1?
+###Las carreras de F1 tienen muchos factores que influyen en el resultado
+###Los patrones de rendimiento pueden ser complejos y no lineales
+###Es importante poder explicar las predicciones
+###Los datos pueden tener variaciones significativas
+###Se pueden identificar patrones específicos para diferentes pilotos o equipos
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=39)
 model = GradientBoostingRegressor(n_estimators=100, learning_rate=0.1, random_state=39)
 model.fit(X_train, y_train)

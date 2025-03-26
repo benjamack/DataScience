@@ -1,4 +1,57 @@
-# 2025_f1_predictions
+# Predicciones de Fórmula 1 2025
+
+Este proyecto utiliza machine learning para predecir los resultados de las carreras de Fórmula 1, específicamente el Gran Premio de China 2025.
+
+## Características
+
+- Predicción de tiempos de carrera basada en datos históricos
+- Uso de Gradient Boosting para el modelo de predicción
+- Análisis de datos de múltiples carreras
+- Visualización de resultados
+
+## Requisitos
+
+- Python 3.9+
+- fastf1
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+
+## Instalación
+
+1. Clonar el repositorio:
+```bash
+git clone https://github.com/benjamack/DataScience.git
+cd DataScience
+```
+
+2. Instalar dependencias:
+```bash
+pip install -r requirements.txt
+```
+
+## Uso
+
+Para ejecutar las predicciones:
+```bash
+python prediction1.py
+```
+
+## Resultados
+
+El modelo predice los tiempos de carrera para el GP de China 2025, utilizando datos históricos de las primeras carreras de 2024.
+
+## Métricas del Modelo
+
+- Error Absoluto Medio (MAE): 3.47 segundos
+
+## Estructura del Proyecto
+
+- `prediction1.py`: Script principal de predicción
+- `requirements.txt`: Lista de dependencias
+- `f1_cache/`: Directorio de caché para datos de FastF1
 
 # 🏎️ F1 Predictions 2025 - Machine Learning Model
 
