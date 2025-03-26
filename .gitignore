@@ -36,4 +36,11 @@ f1_cache/
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Archivos generados por el análisis
+analysis_*.png
+correlation_matrix_*.png
+
+# Archivos del sistema
+*.pyc 
